@@ -1,0 +1,50 @@
+\documentclass{article}
+
+% Es gibt noch book und report - da wären
+% dann z.B. \chapter eine Möglichkeit.
+
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+
+\begin{document}
+Ein wenig Text mit \emph{Hervorhebungen und \emph{geschachteltem} Inhalt.}
+
+Ein wenig Text mit \textit{kursiver Schrift und \textit{geschachteltem} Inhalt.}
+
+\textbf{Fette Schrift} gibt es auch.
+
+%* Gliederungsbefehle
+
+\section{Titel des Ersten Abschnitts}
+
+Text mit Inhalten des ersten Abschnitts
+
+\section{Zweiter Abschnitt}
+
+Text des zweiten Abschnitts.
+
+%* Listen
+
+\section{Geordnete Liste}
+
+\begin{enumerate}
+    \item Ein Eintrag
+    \item Ein Weiterer
+    \item Wahnsinn! Drei Einträge
+\end{enumerate}
+
+\section{Ungeordnete Liste}
+
+\begin{itemize}
+    \item Ein Eintrag
+    \item Ein Weiterer
+    \item Wahnsinn! Drei Einträge
+\end{itemize}
+
+\section{Paragraph}
+
+\paragraph{Das ist ein Paragraph. Lorem Ipsum Dolor Sit Amet, um zu schauen, ob ein automatischer Einzug in der Ersten Zeile erfolgt.}
+
+\subparagraph{Das ist ein Sub-Paragraph. Lorem Ipsum Dolor Sit Amet, um zu schauen, ob ein automatischer Einzug in der Ersten Zeile erfolgt.}
+
+\end{document}
