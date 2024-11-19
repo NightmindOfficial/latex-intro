@@ -1,0 +1,34 @@
+%* Die Standardklassen
+
+% LaTeX kommt mit einigen Standardklassen, die sich bis auf einige Abwandlungen ähneln:
+
+%     article: kurze Dokumente ohne Kapitel
+%     report: längere Dokumente mit Kapiteln, einseitiger Druck
+%     book: längere Dokumente mit Kapiteln, beidseitiger Druck, mit Titelei und Anhängen (bspw. für einen Index)
+%     letter: Schriftverkehr ohne Abschnitte
+%     slides: für Präsentationen (siehe aber auch weiter unten)
+
+%* Im Nachfolgenden ein Beispiel für einen Brief, der bereits sehr unterschiedliche Befehle benutzt:
+
+\documentclass{letter}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\begin{document}
+
+\begin{letter}{Max Mustermann\\Musterstraße 123\\Musterstadt}
+
+    \opening{Sehr geehrter Herr Mustermann,}
+
+    Hier kommt der Text
+
+    \closing{Mit freundlichen Grüßen,\\Nightmind}
+
+\end{letter}
+
+
+% Die Standardklassen article, report und book 
+% unterstützen die Optionen 10pt, 11pt und 12pt 
+% für die Schriftgröße und twocolumn, um ein 
+% zweispaltiges Dokument zu setzen.
+
+\end{document}
