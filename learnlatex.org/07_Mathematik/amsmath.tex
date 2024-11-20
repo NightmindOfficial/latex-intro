@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+
+\begin{document}
+Löse die folgende Rekursion für $ n,k\geq 0 $:
+\begin{align*}
+    Q_{n,0} & = 1   \quad Q_{0,k} = [k=0];                                      \\
+    Q_{n,k} & = Q_{n-1,k}+Q_{n-1,k-1}+\binom{n}{k}, \quad\text{für $n$, $k>0$.}
+\end{align*}
+
+
+AMS Matrizes.
+\[
+    \begin{matrix}
+        a & b & c \\
+        d & e & f
+    \end{matrix}
+    \quad
+    \begin{pmatrix}
+        a & b & c \\
+        d & e & f
+    \end{pmatrix}
+    \quad
+    \begin{bmatrix}
+        a & b & c \\
+        d & e & f
+    \end{bmatrix}
+\]
+
+
+\section{Schriften im Mathematikmodus}
+
+Die Matrix $\mathrm{M}$.
+Die Matrix $\mathit{M}$.
+Die Matrix $\mathbf{M}$.
+Die Matrix $\mathsf{M}$.
+Die Matrix $\mathtt{M}$.
+% Die Matrix $\mathbb{M}$.
+
+\subsection{Normaler Text im Mathematikmodus}
+
+$\text{schlechte Verwendung } Ding  \neq \mathit{Ding} \neq \mathrm{Ding} $
+
+\textit{$\text{schlechte Verwendung } Ding \neq \mathit{Ding} \neq \mathrm{Ding} $}
+
+\end{document}

@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+
+\newcommand{\diff}{\mathop{}\!d}            % für kursiv
+% \newcommand{\diff}{\mathop{}\!\mathrm{d}} % für aufrecht
+
+\begin{document}
+Ein Satz mit Mathematik im Text: \(y = mx + c\).
+Ein zweiter Satz mit Mathematik in der Zeile: \(5^{2}=3^{2}+4^{2}\).
+
+Ein zweiter Absatz mit alleinstehender Gleichung.
+\[
+    y = mx + c
+\]
+Man beachte, dass der Absatz nach der Gleichung fortgeführt wird.
+
+Hochgestellter Exponent \(a^{b}\) und tiefgestellter Index \(a_{b}\). Spezielle Mathematik ist auch möglich: \(y = 2 \sin \theta^{2}\).
+
+Ein Absatz über eine größere Gleichung
+\[
+    \int_{-\infty}^{+\infty} e^{-x^2} \, dx
+\]
+
+Ein Absatz über eine größere Gleichung mit eigenem Kommando
+\[
+    \int_{-\infty}^{+\infty} e^{-x^2} \diff x
+\]
+
+\section{Nummerierte Gleichungen}
+
+\begin{equation}
+    \int_{-\infty}^{+\infty} e^{-x^2} \diff x
+\end{equation}
+\end{document}
