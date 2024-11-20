@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+
+\begin{document}
+Dieses Bild
+\begin{center}
+    \includegraphics[height=2cm]{example-image}
+\end{center}
+ist ein importiertes PDF.\@
+\newpage
+\begin{center}
+    \includegraphics[height = 0.5\textheight]{example-image}
+\end{center}
+Etwas Text
+\begin{center}
+    \includegraphics[width = 0.5\textwidth]{example-image}
+\end{center}
+
+\newpage
+
+\begin{center}
+    \includegraphics[clip, trim = 0 0 50 50]{example-image}
+\end{center}
+
+\end{document}
