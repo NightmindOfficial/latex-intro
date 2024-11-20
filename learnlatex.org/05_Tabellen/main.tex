@@ -1,0 +1,158 @@
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage[margin=1in]{geometry}
+
+
+\begin{document}
+\section{Tabellen}
+
+% Typ	Beschreibung
+% l	linksbündige Spalte
+% c	zentrierte Spalte
+% r	rechtsbündige Spalte
+% p{breite}	eine Spalte der festen Breite breite; der Text wird automatisch umgebrochen und im Blocksatz ausgegeben
+% m{breite}	wie p, allerdings mit vertikaler Zentrierung zur übrigen Zeile
+% b{breite}	wie p, aber an der Unterkante ausgerichtet
+% w{ausrichtung}{breite}	gibt den Inhalt der festen Breite breite aus, bei zu großem Inhalt überlappt der Inhalt die Spaltenbreite. Die horizontale Ausrichtung kann aus l, c und r ausgewählt werden.
+% W{ausrichtung}{breite}	wie w, es wird allerdings eine Warnung ausgegeben, wenn der Inhalt breiter als breite sein sollte.
+
+\begin{tabular}{lll}
+    Tier   & Nahrung & Größe  \\
+    Hund   & Fleisch & mittel \\
+    Pferd  & Heu     & groß   \\
+    Frosch & Fliegen & klein  \\
+\end{tabular}
+
+\section{Lange Tabellen mit Festbreite}
+
+\begin{tabular}{cp{9cm}}
+    Tier  & Beschreibung                                                         \\
+    Hund  & Der Hund ist ein Mitglied der Gattung Canis, welche Teil der Familie
+    Canidae ist, und das weitverbreitetste Landraubtier.                         \\
+    Katze & Katzen sind eine domestizierte Art kleiner fleischfressender
+    Säugetiere. Sie ist die einzige domestizierte Art der Familie Felidae
+    und wird häufig als Hauskatze bezeichnet, um sie von den wildlebenden
+    Mitglieder dieser Familie abzugrenzen.                                       \\
+\end{tabular}
+
+\section{Wildcard-Präambel}
+
+\begin{tabular}{*{3}{l}}
+    Tier   & Nahrung & Größe  \\
+    Hund   & Fleisch & mittel \\
+    Pferd  & Heu     & groß   \\
+    Frosch & Fliegen & klein  \\
+\end{tabular}
+
+\section{Linien}
+\begin{tabular}{lll}
+    \toprule
+    Tier   & Nahrung & Größe  \\
+    \midrule
+    Hund   & Fleisch & mittel \\
+    Pferd  & Heu     & groß   \\
+    Frosch & Fliegen & klein  \\
+    \bottomrule
+\end{tabular}
+
+\section{Cmidrule}
+
+\begin{tabular}{lll}
+    \toprule
+    Tier   & Nahrung & Größe  \\
+    \midrule
+    Hund   & Fleisch & mittel \\
+    \cmidrule{1-1}
+    Pferd  & Heu     & groß   \\
+    \cmidrule{1-1}
+    \cmidrule{3-3}
+    Frosch & Fliegen & klein  \\
+    \bottomrule
+\end{tabular}
+
+\section{Cmidrule - shortened}
+
+\begin{tabular}{lll}
+    \toprule
+    Tier   & Nahrung & Größe  \\
+    \midrule
+    Hund   & Fleisch & mittel \\
+    \cmidrule(r){1-2}
+    Pferd  & Heu     & groß   \\
+    \cmidrule(r){1-1}
+    \cmidrule(rl){2-2}
+    \cmidrule(l){3-3}
+    Frosch & Fliegen & klein  \\
+    \bottomrule
+\end{tabular}
+
+\section{Addlinespace}
+
+\begin{tabular}{cp{9cm}}
+    \toprule
+    Tier  & Beschreibung                                                         \\
+    \midrule
+    Hund  & Der Hund ist ein Mitglied der Gattung Canis, welche Teil der Familie
+    Canidae ist, und das weitverbreitetste Landraubtier.                         \\
+    \addlinespace
+    Katze & Katzen sind eine domestizierte Art kleiner fleischfressender
+    Säugetiere. Sie ist die einzige domestizierte Art der Familie Felidae
+    und wird häufig als Hauskatze bezeichnet, um sie von den wildlebenden
+    Mitglieder dieser Familie abzugrenzen.                                       \\
+    \bottomrule
+\end{tabular}
+
+\section{Zellen zusammenfügen}
+
+\subsection{Horizontal}
+
+\begin{tabular}{lll}
+    \toprule
+    Tier         & Nahrung                       & Größe  \\
+    \midrule
+    Hund         & Fleisch                       & mittel \\
+    Pferd        & Heu                           & groß   \\
+    Frosch       & Fliegen                       & klein  \\
+    Wolpertinger & \multicolumn{2}{c}{unbekannt}          \\
+    \bottomrule
+\end{tabular}
+
+\subsection{Sonderfall: Eine Spalte}
+
+\begin{tabular}{lll}
+    \toprule
+    \multicolumn{1}{c}{Tier} & \multicolumn{1}{c}{Nahrung}   & \multicolumn{1}{c}{Größe} \\
+    \midrule
+    Hund                     & Fleisch                       & mittel                    \\
+    Pferd                    & Heu                           & groß                      \\
+    Frosch                   & Fliegen                       & klein                     \\
+    Wolpertinger             & \multicolumn{2}{c}{unbekannt}                             \\
+    \bottomrule
+\end{tabular}
+
+\subsection{Vertikal}
+
+Vertikales zusammenfügen ist in \LaTeX{} nicht erlaubt, aber man kann tricksen:
+
+\begin{tabular}{lll}
+    \toprule
+    Gruppe          & Tier    & Größe  \\
+    \midrule
+    Pflanzenfresser & Pferd   & groß   \\
+                    & Reh     & mittel \\
+                    & Hase    & klein  \\
+    \addlinespace
+    Fleischfresser  & Hund    & mittel \\
+                    & Katze   & klein  \\
+                    & Löwe    & groß   \\
+    \addlinespace
+    Allesfresser    & Krähe   & klein  \\
+                    & Bär     & groß   \\
+                    & Schwein & mittel \\
+    \bottomrule
+\end{tabular}
+
+\end{document}
