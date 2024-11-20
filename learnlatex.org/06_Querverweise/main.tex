@@ -1,0 +1,37 @@
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+
+\begin{document}
+Hallo Welt!
+
+Dies ist ein erstes Dokument.
+
+\section{Titel des ersten Abschnitts}
+
+Inhalt des ersten Abschnitts.
+
+
+\subsection{Unterabschnitt des ersten Abschnitts}\label{subsec:labeleins}
+
+Inhalt des ersten Unterabschnitts.
+\begin{equation}
+    e^{i\pi}+1 = 0
+    \label{eq:labelzwei}
+\end{equation}
+
+In Unterabschnitt~\ref{subsec:labeleins} ist Gleichung~\ref{eq:labelzwei}.
+
+\section{Zweiter Abschnitt}\label{sec:one}
+
+Hier ist die Figur eigentlich.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.5\textwidth]{example-image}
+    \caption{Ein Beispielbild, das floated\label{fig:one}}
+\end{figure}
+
+Im Abschnitt~\ref{sec:one} ist Figur~\ref{fig:one}.
+\end{document}
