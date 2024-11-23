@@ -1,0 +1,55 @@
+\documentclass[a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin]{babel}
+\usepackage[parfill]{parskip}
+\usepackage{lipsum}
+
+
+
+
+\begin{document}
+
+\section{Lipsum}
+\lipsum[1-5]{}
+
+%* Explizite Abstände
+\newpage
+\section{Explizite Abstände}
+
+Etwas Text \hspace{1cm} mehr Text.
+
+\vspace{10cm}
+
+Noch mehr Text.
+
+%* Explizite Textformatierung
+\section{Explizite Textformatierung}
+
+\subsection{Einzeln}
+
+Hier ein wenig Spaß mit Schrift: \textbf{fett}, \textit{kursiv},
+\textrm{Roman}, \textsf{serifenlos}, \texttt{breitengleich} und
+\textsc{Kapitälchen}.
+
+\subsection{Längere Abschnitte}
+
+Normaler Text.
+
+    {\itshape{}
+
+        Dieser Text ist kursiv.
+
+        Der hier auch: der Effekt wird nicht von einem Absatz beschränkt.\/
+
+    }
+
+\section{Schriftgröße}
+
+Normaler Text.
+
+\begin{center}
+    {\itshape\large Etwas Text\par}
+    Normaler Text
+        {\bfseries\small viel kleinerer Text\par}
+\end{center}
+\end{document}
