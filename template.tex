@@ -1,0 +1,52 @@
+\documentclass[a4paper, titlepage=firstiscover]{scrartcl}
+%4\usepackage{scrhack} % nach \documentclass
+\usepackage{float}
+\floatplacement{figure}{htbp}
+\floatplacement{table}{htbp}
+
+\usepackage[aux]{rerunfilecheck}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage[autostyle]{csquotes}
+
+\usepackage[margin=1in]{geometry}
+
+
+\usepackage[unicode]{hyperref}
+\usepackage{bookmark}
+
+\usepackage[
+locale=DE, % Ändern wenn auf Englisch geschrieben wird
+separate-uncertainty=true, % Immer Unsicherheit mit ±
+per-mode=symbol-or-fraction, % m/s im Text, sonst \frac
+% alternativ:
+% per-mode=reciprocal, % m s^{-1}
+% output-decimal-marker=., % . statt , für Dezimalzahlen
+]{siunitx}
+
+\title{Titel der Arbeit}
+% Mehrere Autoren mit \and:
+\author{Otis Mohr \and Motis Ohr}
+\date{Durchführung: 01.01.2000, Abgabe: 31.12.2024}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\part{Part 1}
+\section{Kapitel 1}
+\section{Kapitel 2}
+\section{Kapitel 3}
+\part{Part 2}
+\section{Kapitel 4}
+\section{Kapitel 5}
+\section{Kapitel 6}
+\part{Part 3}
+\section{Kapitel 7}
+\section{Kapitel 8}
+\section{Kapitel 9}
+
+Hello, World.
+\end{document}
