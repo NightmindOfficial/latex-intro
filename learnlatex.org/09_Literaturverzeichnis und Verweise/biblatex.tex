@@ -1,0 +1,21 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage[style=authoryear]{biblatex}
+\usepackage{csquotes}
+\addbibresource{bibliography.bib}
+
+\begin{document}
+Die mathematischen Beispiele stammen aus \autocite{Nightmind2001}.
+
+Weitere Verweise: \parencite{Nightmind2001} oder \textcite{Clear2018} oder sogar
+\citetitle{Nightmind2001}.
+
+\autocite[56]{Clear2018}
+
+\autocite[Siehe][45-48]{Nightmind2001}
+
+Gemeinsam \autocite{Nightmind2001,Clear2018}
+
+\printbibliography{}
+\end{document}

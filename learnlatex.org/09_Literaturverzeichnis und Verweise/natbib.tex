@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{natbib}
+
+\begin{document}
+Die mathematischen Beispiele stammen aus \citet{Nightmind2001}, während etwas
+Chemie in \citet{Clear2018} abgedeckt wird.
+
+Einige geklammerte Zitierungen: \citep{Nightmind2001} und dann
+\citep[S.~56]{Clear2018}.
+
+\citep[Siehe][Seiten~45--48]{Nightmind2001}
+
+Gemeinsam \citep{Nightmind2001, Clear2018}
+
+\bibliographystyle{plainnat}
+\bibliography{bibliography}
+\end{document}
